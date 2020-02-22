@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'io.sunjoo'
-version = '0.0.1'
+version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
@@ -14,9 +14,8 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 test {
 	useJUnitPlatform()
