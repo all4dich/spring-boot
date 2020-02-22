@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  sunjoo-sample-ui:
+    build:
+      context: ./
+    image: sunjoo-sample-ui:latest
+    ports:
+      - 8080:8080
+#    volumes:
+#        - ./conf:/etc/mysql
+#        - ./data:/var/lib/mysql
