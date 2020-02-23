@@ -20,7 +20,7 @@ public class HealthCheckController {
 
     @GetMapping("/health")
     @ResponseBody
-    public String sayHello() {
+    public String checkHealth() {
         RestTemplate restTemplate = new RestTemplate();
         String port = environment.getProperty("local.server.port");
         String host = "";
@@ -36,5 +36,18 @@ public class HealthCheckController {
         System.out.println("Port: " + port);
     
         return result;
+    }
+
+    @GetMapping("/hello")
+    @ResponseBody
+    public String sayHello() {
+        String host = "";
+        try {
+            host = InetAddress.getLocalHost().getHostName();
+        } catch (Exception e) {
+            host = "localhost";
+        }
+
+        return new String("Hello from " + host);
     }
 }
