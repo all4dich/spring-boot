@@ -26,6 +26,10 @@ case $CMD in
         docker-compose build  --no-cache ${APP_CONTAINER}
         docker-compose up -d --scale ${APP_CONTAINER}=${APP_CONTAINER_SCALE} --build --force-recreate
         ;;
+    help)
+        echo "Available commands:"
+        echo "`basename $0` [start | stop | restart | deploy | status | scale-adjust]"
+        ;;
     scale-adjust)
         docker-compose up -d --scale ${APP_CONTAINER}=${APP_CONTAINER} --build --force-recreate
         ;;
