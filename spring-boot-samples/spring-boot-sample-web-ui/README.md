@@ -41,6 +41,12 @@ two of application containers are created and made
 ### ```./devops.sh scale-adjust ${Number of app containers}```
 * Show a list of containers that are running for services
 
+## Environments
+* 
+* Logs
+  * Container logs: ```$WORKSPACE/logs/container_log/$HOSTNAME.log```
+  * NGINX logs: ```$WORKSPACE/logs/nginx/```
+
 
 
 
