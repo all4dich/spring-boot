@@ -5,15 +5,12 @@ services:
     build:
       context: ./
     image: sunjoo-sample-ui:latest
-#    ports:
-#      - 8080:8080
-#    volumes:
-#        - ./conf:/etc/mysql
-#        - ./data:/var/lib/mysql
+    volumes:
+      - ./logs/container_log:/var/container_log
   sunjoo-nginx:
     image: nginx
     ports:
       - "80:80"
     volumes:
       - ./nginx:/etc/nginx
-#      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./logs/nginx:/var/log/nginx
