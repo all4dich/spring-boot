@@ -10,12 +10,14 @@ $> git clone -b sunjoo --depth 1 https://github.com/all4dich/spring-boot.git
 $> pushd spring-boot
 $> . goto-web-ui-dir.sh
 ```
-3. run ```./devops.sh help``` to show a list of commands
+3. Run ```./devops.sh help``` to show a list of commands
 ```
 $> ./devops.sh help
 Available commands:
 devops.sh [start | stop | restart | deploy | status | scale-adjust]
 ```
+4. Run ```./devops.sh start``` to start services
+5. Check ```./logs``` directory to view applications containers/nginx proxy server's logs
 
 ## Commands 
 
@@ -40,6 +42,11 @@ two of application containers are created and made
 
 ### ```./devops.sh scale-adjust ${Number of app containers}```
 * Show a list of containers that are running for services
+
+## Environments
+* Logs
+  * Container logs: ```$WORKSPACE/logs/container_log/$HOSTNAME.log```
+  * NGINX logs: ```$WORKSPACE/logs/nginx/```
 
 
 
